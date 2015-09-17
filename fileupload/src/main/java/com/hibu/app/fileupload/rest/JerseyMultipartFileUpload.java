@@ -26,6 +26,7 @@ import com.sun.jersey.multipart.FormDataMultiPart;
 @Path("/multifiles")
 //http://localhost:8098/fileupload/multiform.html
 //http://localhost:8098/fileupload/rest/application.wadl
+//http://10.204.70.60:8098/fileupload/form.html
 public class JerseyMultipartFileUpload {
 
 	private static final String SERVER_UPLOAD_LOCATION_FOLDER = "C://Users/IB1272/Desktop/Upload_Files/";

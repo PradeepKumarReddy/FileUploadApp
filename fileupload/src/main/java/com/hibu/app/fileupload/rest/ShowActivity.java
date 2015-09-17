@@ -75,7 +75,7 @@ public class ShowActivity {
 			
 			//convert array of bytes into file
 		    FileOutputStream fileOuputStream = 
-	                  new FileOutputStream("C:\\Users\\IB1272\\Desktop\\Upload_Files\\testing2.png"); 
+	                  new FileOutputStream("C:\\Users\\IB1272\\Desktop\\Upload_Files\\testing3.png"); 
 		    fileOuputStream.write(imageBytes);
 		    fileOuputStream.close();
 		
