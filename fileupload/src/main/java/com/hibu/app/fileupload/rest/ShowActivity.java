@@ -42,7 +42,7 @@ public class ShowActivity {
 	 */
 
 	public static void main(final String[] argv) throws JSONException {
-		String filePath = "imageData.txt";
+		String filePath = "imageData1.txt";
 		ClassLoader classLoader = Thread.currentThread()
 				.getContextClassLoader();
 		File file = new File(classLoader.getResource(filePath).getFile());
@@ -75,7 +75,7 @@ public class ShowActivity {
 			
 			//convert array of bytes into file
 		    FileOutputStream fileOuputStream = 
-	                  new FileOutputStream("C:\\Users\\IB1272\\Desktop\\Upload_Files\\testing3.png"); 
+	                  new FileOutputStream("C:\\Users\\IB1272\\Desktop\\Upload_Files\\testing4.png"); 
 		    fileOuputStream.write(imageBytes);
 		    fileOuputStream.close();
 		
@@ -84,5 +84,19 @@ public class ShowActivity {
 			e.printStackTrace();
 		}
 
+	}
+	
+	public void JSONParse(String JSON_DATA) throws JSONException {
+		final JSONObject obj = new JSONObject(JSON_DATA);
+		final JSONArray geodata = obj.getJSONArray("imageData");
+		final int n = geodata.length();
+		for (int i = 0; i < n; ++i) {
+			final JSONObject person = geodata.getJSONObject(i);
+			System.out.println(person.getInt("id"));
+			System.out.println(person.getString("name"));
+			System.out.println(person.getString("gender"));
+			System.out.println(person.getDouble("latitude"));
+			System.out.println(person.getDouble("longitude"));
+		}
 	}
 }
